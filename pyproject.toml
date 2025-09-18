@@ -1,0 +1,20 @@
+[project]
+name = "nextjs-fastapi-streaming"
+version = "0.1.0"
+description = "Next.js FastAPI AI Streaming Application"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "openai",
+    "python-dotenv",
+    "pydantic",
+    "requests>=2.32.5",
+]
+
+[tool.uv]
+dev-dependencies = []
+
+[project.scripts]
+start-api = "uvicorn api.index:app --reload --port 8000"

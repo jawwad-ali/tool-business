@@ -1,27 +1,10 @@
 {
   "functions": {
-    "app/api/**": {
-      "excludeFiles": "{.next,.git,node_modules}/**"
-    }
-  },
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
+    "app/api/chat/route.py": {
+      "runtime": "@vercel/python"
     },
-    {
-      "src": "app/api/**/*.py",
-      "use": "@vercel/python"
+    "app/api/health/route.py": {
+      "runtime": "@vercel/python"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/app/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  }
 }

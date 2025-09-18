@@ -1,2 +1,7 @@
-run fastapi server: uv run uvicorn app.api.index:app --reload --port 8000
+run fastapi server (local dev): uv run uvicorn app.api.index:app --reload --port 8000
 run nextjs server: pnpm run dev
+run both together: npm run dev
+
+# For production on Vercel:
+# - /api/chat → app/api/chat/route.py
+# - /api/health → app/api/health/route.py

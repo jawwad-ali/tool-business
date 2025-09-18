@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "fastapi-dev": "uv run uvicorn api.index:app --reload --port 8000",
+    "fastapi-dev": "uv run uvicorn app.api.index:app --reload --port 8000",
     "fastapi-sync": "uv sync",
     "fastapi-install": "uv add",
     "next-dev": "next dev",

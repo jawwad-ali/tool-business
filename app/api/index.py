@@ -155,7 +155,7 @@ client = OpenAI(
 
 @app.get("/api/health")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "I am very Healthy!"}
 
 @app.post("/api/chat")
 async def chat_endpoint(request: dict):

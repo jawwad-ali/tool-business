@@ -17,4 +17,4 @@ dependencies = [
 dev-dependencies = []
 
 [project.scripts]
-start-api = "uvicorn api.index:app --reload --port 8000"
+start-api = "uvicorn app.api.index:app --reload --port 8000"

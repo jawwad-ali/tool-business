@@ -1,16 +1,9 @@
-import os
-from dotenv import load_dotenv
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+# api/chat.py
+from fastapi import APIRouter
 
-load_dotenv(".env.local")
+router = APIRouter()
 
-# Create a separate FastAPI app for this endpoint
-app = FastAPI()
-
-@app.get("/")
-async def health_check():
-    return {"status": "I am very Healthy!"}
-
-# Vercel handler
-handler = app
+@router.post("/api/chat") # Use the full path here
+async def handle_chat():
+    # Your chat logic here
+    return {"message": "This is the chat endpoint"}

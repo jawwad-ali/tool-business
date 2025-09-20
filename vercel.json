@@ -1,10 +1,14 @@
 {
-  "functions": {
-    "app/api/chat/route.py": {
-      "runtime": "python@3.12"
-    },
-    "app/api/health/route.py": {
-      "runtime": "python@3.12"
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
-  }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
 }
